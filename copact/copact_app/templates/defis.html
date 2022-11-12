@@ -1,0 +1,116 @@
+{% extends 'baseline.html' %}
+{% load static %}
+{% block extracss %}
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/defis.css">
+{% endblock %}
+
+{% block extrajs %}
+    <script src="/static/lib/echarts/echarts.js" charset="utf-8"></script>
+{% endblock %}
+
+{% block body_content %}
+
+<div>
+    <p class="h1">Mon Impact</p>
+    <div class="" id="echarts" style="margin-top: -40px;">
+        <div id="main"></div>
+    </div>
+</div>
+
+<div class="card centered" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">-90g CO2</h5>
+        <p class="card-text"><span style='color: #95bd98'>Bravo !</span> Vous avez réduit votre impact de 90g de CO2</p>
+    </div>
+</div>
+
+<div style="margin-top: 30px;">
+    <p>Récap de la semaine</p>
+    <div class="" id="echarts" style="margin-top: -90px;">
+        <div id="week"></div>
+    </div>
+</div>
+
+<div class="plus">
+    <a href='/'>Voir plus +</a>
+</div>
+
+<script>
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['Total', 'Personnel']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [
+        {
+        name: 'Personnel',
+        type: 'line',
+        stack: 'Total',
+        data: [220, 180, 101, 134, 90, 230],
+        color: '#95bd98'
+        },
+        {
+        name: 'Total',
+        type: 'line',
+        stack: 'Total',
+        data: [0, 80, 40, 30, 80, 20],
+        color: 'red'
+        },
+    ]
+    };
+
+    option && myChart.setOption(option, true);
+</script>
+
+<script>
+    var chartDom = document.getElementById('week');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+          type: 'category',
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: [
+          {
+            data: [60, 100, 105, 70, 72, 86, 90],
+            type: 'bar'
+          }
+        ]
+      };
+
+    option && myChart.setOption(option, true);
+</script>
+
+{% endblock %}
