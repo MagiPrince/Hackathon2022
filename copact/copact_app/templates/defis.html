@@ -20,7 +20,7 @@
 
 <div class="card centered" style="width: 18rem;">
     <div class="card-body">
-        <h5 class="card-title">-90g CO2</h5>
+        <h5 class="card-title">-200g CO2</h5>
         <p class="card-text"><span style='color: #95bd98'>Bravo !</span> Vous avez réduit votre impact de 90g de CO2</p>
     </div>
 </div>
@@ -67,14 +67,14 @@
         name: 'Personnel',
         type: 'line',
         stack: 'Total',
-        data: [220, 180, 101, 134, 90, 230],
+        data: [100, 100, 220, 134, 90, 230],
         color: '#95bd98'
         },
         {
         name: 'Total',
         type: 'line',
         stack: 'Total',
-        data: [0, 80, 40, 30, 80, 20],
+        data: [10, 0, 80, 20, 70, 20],
         color: 'red'
         },
     ]
@@ -104,7 +104,10 @@
         },
         series: [
           {
-            data: [60, 100, 105, 70, 72, 86, 90],
+            data: [180, 70, {value: 224, itemStyle: {
+                color: '#95bd98'
+              }
+            }, 180, 198, 214, 200],
             type: 'bar'
           }
         ]
