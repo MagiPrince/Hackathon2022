@@ -10,7 +10,7 @@
 
 {% block body_content %}
 <div class="container-fluid">
-  <p class="h1">Nouveaux Défis</p>
+  <p class="h1 mt-2">Nouveaux</p>
   <div class="scrollable-container d-flex">
     <div style="width:300px;" class="col-6 mx-2">
       <div style="width:300px;" class="card">
@@ -43,7 +43,7 @@
       </div>
     </div>
   </div>
-  <p class="h1">Défis En cours</p>
+  <p class="h1 mt-2">En cours</p>
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Engagement personnel</h5>
@@ -52,19 +52,27 @@
     </div>
     <div class="card-footer text-end"><span class="badge rounded-pill bg-success">+100 XP</span></div>
   </div>
+  <p class="h1 mt-2">Réussis</p>
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Engagement personnel</h5>
-      <div class="float-end">
-        <img src="/static/img/svg/crown.svg" alt="">
+      <div class="row">
+        <div class="col-9">
+          <h5 class="card-title">Défi de Caroline</h5>
+        </div>
+        <div class="col-3 text-center">
+          <img style="height:25px;" src="/static/img/svg/crown.svg" alt="">
+          <br>
+          <span class="badge rounded-pill bg-success">75XP</span>
+        </div>
       </div>
-      <p class="card-text"><strong>Défi : </strong>Participer au prochain hackathon climatique</p>
-      <p>Défi Terminé. 100XP gagnés.</p>
+      <div>
+      </div>
+      <p class="card-text"><strong>Défi : </strong> Ne pas manger de viandes pendant 3 jours</p>
       <div class="collapse" id="collapseExample">
         <div class="card card-body">
-          <p>BRAVO</p>
-          <p>200g CO<sub>2</sub> évités</p>
-          <p>Vous avez été 1227 personnes à réussir le défi, soit 245kg évités</p>
+          <p class="h2">BRAVO</p>
+          <p>Tu as évité l'émission de 200g CO<sub>2</sub></p>
+          <p>Vous avez été 1227 personnes à réussir le défi, soit 245kg de CO<sub>2</sub> évités</p>
           <p>Si tous les citoyens du Grand Genève avaient fait comme vous, nous aurions évité 200 tonnes de CO<sub>2</sub>.</p>
         </div>
       </div>
