@@ -1,5 +1,4 @@
-from django.http import HttpRequest, HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 
 def charging_page(request):
     return render(request, 'charging_page.html')
