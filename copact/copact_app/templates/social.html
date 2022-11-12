@@ -1,0 +1,34 @@
+{% extends 'baseline.html' %}
+{% load static %}
+{% block extracss %}
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+{% endblock %}
+
+{% block extrajs %}
+    <script src="/static/lib/echarts/echarts.js" charset="utf-8"></script>
+{% endblock %}
+
+{% block body_content %}
+<div class="w-100 d-flex justify-content-center">
+  <ul class="w-100 nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Novice</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Intermédiaire</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Expert</a>
+    </li>
+  </ul>
+</div>
+<p class="h1">Classement</p>
+<ul class="list-group">
+  <li class="list-group-item"><img style="height:25px;" src="/static/img/svg/user.svg" alt=""><strong>1. Patrick53</strong> <span class=""><span class="badge rounded-pill bg-success">Niveau 50</span></li>
+  <li class="list-group-item"><img style="height:25px;" src="/static/img/svg/user.svg" alt=""><strong>2. Justine364</strong> <span class=""><span class="badge rounded-pill bg-success">Niveau 48</span></li>
+  <li class="list-group-item"><img style="height:25px;" src="/static/img/svg/user.svg" alt=""><strong>3. Bertrand82</strong> <span class=""><span class="badge rounded-pill bg-success">Niveau 34</span></li>
+  <li class="list-group-item"><img style="height:25px;" src="/static/img/svg/user.svg" alt=""><strong>4. Camille28</strong> <span class=""><span class="badge rounded-pill bg-success">Niveau 20</span></li>
+  <li class="list-group-item"><img style="height:25px;" src="/static/img/svg/user.svg" alt=""><strong>5. Titouan289</strong> <span class=""><span class="badge rounded-pill bg-success">Niveau 19</span></li>
+  <li class="list-group-item"><img style="height:25px;" src="/static/img/svg/user.svg" alt=""><strong>Karine2843</strong> <span class=""><span class="badge rounded-pill bg-success">Niveau 5</span></li>
+</ul>
+{% endblock %}

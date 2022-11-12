@@ -10,31 +10,69 @@
 
 {% block body_content %}
 <div class="container-fluid">
-  <p clas="h1">Nouveaux Défis</p>
+  <p class="h1">Nouveaux Défis</p>
   <div class="scrollable-container d-flex">
-    <div class="col-6">
-      <div class="card">
+    <div style="width:300px;" class="col-6 mx-2">
+      <div style="width:300px;" class="card">
         <div class="card-body">
-          <h5 class="card-title">Émission de CO<sub>2</sub></h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <h5 class="card-title">Émission de CO<sub>2</sub> en baisse</h5>
+          <p class="card-text"><strong>Défi : </strong>Laisser votre voiture au garage</p>
+          <p>Accepter le défi ? <a href="#" class="btn btn-success">Oui</a> <a href="#" class="btn btn-danger">Non</a></p>
+        </div>
+        <div class="card-footer text-end"><span class="badge rounded-pill bg-success">+100 XP</span></div>
+      </div>
+    </div>
+    <div style="width:300px;" class="col-6 mx-2">
+      <div style="width:300px;" class="card">
+        <div class="card-body">
+          <h5 class="card-title">Demande énergétique</h5>
+          <p class="card-text"><strong>Défi : </strong>Baisser votre thermostat de 2°C pendant 5 jours</p>
+          <p>Accepter le défi ? <a href="#" class="btn btn-success">Oui</a> <a href="#" class="btn btn-danger">Non</a></p>
+        </div>
+        <div class="card-footer text-end"><span class="badge rounded-pill bg-success">+200 XP</span></div>
+      </div>
+    </div>
+    <div style="width:300px;" class="col-6 mx-2">
+      <div style="width:300px;" class="card">
+        <div class="card-body">
+          <h5 class="card-title">Défi proposé par Julie</h5>
+          <p class="card-text"><strong>Défi : </strong>Prendre une douche en 2 minutes</p>
+          <p>Accepter le défi ? <a href="#" class="btn btn-success">Oui</a> <a href="#" class="btn btn-danger">Non</a></p>
+        </div>
+        <div class="card-footer text-end"><span class="badge rounded-pill bg-success">+50 XP</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="h1">Défis En cours</p>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Engagement personnel</h5>
+      <p class="card-text"><strong>Défi : </strong>Participer au prochain hackathon climatique</p>
+      <p>Avez-vous réussi le défi ? <a href="#" class="btn btn-success">Oui</a> <a href="#" class="btn btn-danger">Non</a></p>
+    </div>
+    <div class="card-footer text-end"><span class="badge rounded-pill bg-success">+100 XP</span></div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Engagement personnel</h5>
+      <div class="float-end">
+        <img src="/static/img/svg/crown.svg" alt="">
+      </div>
+      <p class="card-text"><strong>Défi : </strong>Participer au prochain hackathon climatique</p>
+      <p>Défi Terminé. 100XP gagnés.</p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <p>BRAVO</p>
+          <p>200g CO<sub>2</sub> évités</p>
+          <p>Vous avez été 1227 personnes à réussir le défi, soit 245kg évités</p>
+          <p>Si tous les citoyens du Grand Genève avaient fait comme vous, nous aurions évité 200 tonnes de CO<sub>2</sub>.</p>
         </div>
       </div>
     </div>
-    <div class="col-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
+    <div class="card-footer text-end">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        En savoir plus
+      </button>
     </div>
   </div>
 </div>
