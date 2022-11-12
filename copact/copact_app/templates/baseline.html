@@ -1,0 +1,64 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}CoPat{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="CoPat">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{request.build_absolute_uri}}">
+    <meta property="og:description" content="Challenge ton CO2">
+    <meta content="#B593C0" data-react-helmet="true" name="theme-color" />
+    <meta name="msapplication-TileColor" content="#B593C0">
+    {% block css %}
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css">
+    {% block extracss %}
+    {% endblock %}
+    {% endblock %}
+    {% block js%}
+    <script src="/static/lib/fontawesome/fontawesome.js" crossorigin="anonymous"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    window.onload = () => {
+        [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]')).map(function (tE) {
+            return new bootstrap.Popover(tE, {trigger: 'focus'});
+        });
+        [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]')).map(function (tE) {
+            return new bootstrap.Tooltip(tE);
+        });
+        if(document.querySelector("div.copact-container") != null)document.querySelector("div.copact-container").style["min-height"] = (window.innerHeight - (document.querySelector("nav.navbar").offsetHeight)-1)+"px"
+    }
+    </script>
+    {% block extrajs%}
+    {% endblock %}
+    {% endblock %}
+</head>
+{% block body %}
+    <body>
+        {% block body_header %}
+            {% include 'navbar.html' %}
+        {% endblock %}
+
+        {% block body_alert %}
+            <div class="container-fluid justify-content-center mt-2">
+                <!-- <div class="alert alert-danger text-center balise-infos" role="alert">
+                    Site en construction !
+                </div> -->
+            </div>
+        {% endblock %}
+        {% block body_content %}
+            <div class="midas-container container-fluid">
+                <p>Hello there, my name's MIDAS!</p>
+            </div>
+        {% endblock %}
+        {% block body_footer %}
+            {% include 'footer.html' %}
+        {% endblock %}
+    </body>
+{% endblock %}
+</html>
