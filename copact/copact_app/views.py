@@ -9,5 +9,5 @@ def index(request):
 def social(request):
     return render(request, 'social.html')
 
-def conseil(request):
-    return render(request, 'conseil.html')
+def defis(request):
+    return render(request, 'defis.html')
