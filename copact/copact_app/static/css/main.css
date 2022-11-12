@@ -1,3 +1,10 @@
+*{
+  font-family: 'Mulish';
+}
+
+body{
+  overflow: hidden;
+}
 .footer {
     position: fixed;
     left: 0;
@@ -6,4 +13,14 @@
     color: white;
     text-align: center;
     margin-top: 20px;
+}
+
+.scrollable-container{
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.scrollable-container::-webkit-scrollbar {
+  display: none;
 }
